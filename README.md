@@ -2,7 +2,8 @@
 A place for my Hyprland and related application dotfiles (configuration files.
 
 Packages used (Arch/AUR):
-```yay -S 
+```
+yay -S 
 cava \
 dunst \
 hyprland-git \ 
