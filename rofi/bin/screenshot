@@ -61,7 +61,7 @@ shot10 () {
 }
 
 shotwin () {
-	cd ${dir} && grim -g "$(slurp)" - | wl-copy
+	cd ${dir} && grim -g "$(hyprctl activewindow -j | jq '.at,.size ' | jq -r 'join(",")+" "+(input|join("x"))' | sed -ne 's/.*/&"/p' | sed 's/^/"/')" $( date +'%s_grim.png')- | wl-copy
 }
 
 shotarea () {
